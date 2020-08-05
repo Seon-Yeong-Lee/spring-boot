@@ -14,5 +14,11 @@ public class MemberController {
         this.memberService = memberService;
     }
 
+    /*
+        DI의 세가지 방법
+        - 필드 주입 (비추)
+        - setter 주입
+        - 생성자 주입
+     */
 
 }
