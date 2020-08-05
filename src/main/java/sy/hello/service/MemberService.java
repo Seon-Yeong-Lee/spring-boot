@@ -2,12 +2,17 @@ package sy.hello.service;
 
 import sy.hello.domain.Member;
 import sy.hello.repository.MemberRepository;
+import sy.hello.repository.MemoryMemberRepository;
 
 import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
-    private final MemberRepository memberRepository = new MemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /**
      * 회원가입
